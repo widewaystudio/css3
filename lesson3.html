@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<!-- 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<!-- 	<meta http-equiv="X-UA-Compatible" content="id=edge"> -->
+	<title>css3 运动</title>
+  <style type="text/css">
+  	.wrapper{
+  		width:200px;
+  		height:200px;
+       position:relative;
+       transform-style:preserve-3d;
+  		transform:rotateX(45deg);	
+  		animation:move 5s linear  infinite;
+  		margin:200px auto;
+  		perspective:1000;
+  	}
+  	.wrapper div{
+  		width:400px;
+  		height:400px;
+  		position:absolute;  
+  		opacity:1;	
+  		top:0px;
+  		left:0px;	
+  		margin:0 auto;
+  		font-size:60px;
+  		text-align:center;
+  		line-height:400px;
+  		color:#fff;
+  		text-shadow:1px 2px 3px rgba(0,0,0,0.5);
+
+  	}
+  	.wrapper div:nth-child(1){
+  		background-image:url(images/1.jpg);  		
+  		transform:rotate3d(0,1,0,90deg) translate3d(0,0,200px);	
+  		
+  	}
+  	.wrapper div:nth-child(2){
+  		background-image:url(images/2.jpg);
+  		transform:rotate3d(0,1,0,-90deg) translate3d(0,0,200px);
+  	}
+  	.wrapper div:nth-child(3){
+  
+  		background-image:url(images/3.jpg);
+  		transform:rotate3d(1,0,0,90deg) translate3d(0,0,200px);
+  	}
+  	.wrapper div:nth-child(4){
+  		background-image:url(images/4.jpg);
+  		transform:rotate3d(1,0,0,-90deg) translate3d(0,0,200px);
+  	}
+     .wrapper div:nth-child(5){
+  		background-image:url(images/5.jpg);
+  		transform:rotate3d(0,0,1,0deg) translate3d(0,0,200px);
+  	}
+  	.wrapper div:nth-child(6){
+  		background-image:url(images/6.jpg);
+  		transform:rotate3d(0,0,1,180deg) translate3d(0,0,-200px);
+  	}
+
+  	/*.wrapper .item1{
+  		background-image:url(images/1.jpg);
+  		transform:rotateY(60deg) translateZ(200px);
+  	}
+  	  	.wrapper .item2{
+  		background-image:url(images/2.jpg);
+  		transform:rotateY(120deg) translateZ(200px);
+  	}
+  	  	.wrapper .item3{
+  		background-image:url(images/3.jpg);
+  		transform:rotateY(180deg) translateZ(200px);
+  	}
+  	  	.wrapper .item4{
+  		background-image:url(images/4.jpg);
+  		transform:rotateY(240deg) translateZ(200px);
+  	}
+  	  	.wrapper .item5{
+  		background-image:url(images/5.jpg);
+  		transform:rotateY(300deg) translateZ(200px);
+  	}
+
+  	  	.wrapper .item6{
+  		background-image:url(images/6.jpg);
+  		transform:rotateY(0deg) translateZ(200px);
+  	}*/
+  	@keyframes move{
+  		0%{transform:rotate3d(1,1,1,0deg);}
+        100%{transform:rotate3d(1,1,1,360deg) ;}
+
+
+  		}
+
+
+   	  </style>
+  	
+</head>
+<body>
+<div class="wrapper">
+	<div class="item1">1</div>
+	<div class="item2">2</div>
+	<div class="item3">3</div>
+	<div class="item4">4</div>
+	<div class="item5">5</div>
+	<div class="item6">6</div>
+</div>
+</body>
+</html>

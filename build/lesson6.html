@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css酷炫动画效果</title>
+	<style type="text/css">
+	*{
+		padding:0;
+		margin:0;
+		list-style:none;
+
+	}
+	 .wrapper{
+	 	display:flex;
+	 	width:1000px;
+	 	min-height:430px;
+	 	background-color:#efefef;
+        margin:30px auto;
+       flex-wrap:wrap;
+       justify-content:space-around;
+        
+	 }
+	 .content{
+	 	height:200px;
+	 	width:300px;
+	 	flex-grow:0;
+	 	box-sizing:border-box;
+	 	margin:10px 0px 10px;
+        position:relative;     
+         transform-style:preserve-3d;
+         perspective:600px;
+        overflow:hidden;
+
+      	 }
+      	.picbox{
+      	  width:100%;
+      	  height:100%;
+      	  position:absolute;
+      	  transform-style:preserve-3d;
+      	}
+	 .show,.hide{
+	 	width:100%;
+	 	height:100%;
+	 	background:#126790;
+	 	color:#fff;
+	 	top:0px;
+	 	left:0px;
+       font-size:30px;
+       text-align:center;
+       line-height:200px;
+       position:absolute;
+       box-sizing:border-box;
+	 }
+	 .hide{
+	  background:#028600;
+      transform:translate3d(0px,0px,-1px);
+	 }
+     
+  .content .in-left,.content .in-top,.content .in-right,.content .in-bottom,
+  .content .out-left,.content .out-top,.content .out-right,.content .out-bottom{
+   	width:100%;
+   	height:100%;
+   	position:absolute;
+   	transform-style:preserve-3d;
+   	transform-origin:50% 50% -150px;	
+   	animation: inleft 0.3s forwards ease-out;  
+   	}
+   
+   .content	.in-left .hide,.content .out-right .show{ 
+   	transform-origin:300px 0px;
+    transform:translate3d(-300px,0px,0px) rotate3d(0,1,0,-90deg);   	
+   	}
+    @keyframes inleft{
+    	0%{transform:rotate3d(0,0,0,0deg);}
+    	100%{transform:rotate3d(0,1,0,90deg);}
+    }
+
+  .content .in-top,.content .out-top,.content .in-bottom,.content .out-bottom{
+  	transform-origin:50% 50% -100px; 
+  }
+
+    .content .in-top{
+    	
+    	animation-name:intop;
+    }
+    .content .in-top .hide,.content .out-bottom .show{
+    transform-origin:0px 200px;	
+     transform:translate3d(0px,-200px,0px) rotate3d(1,0,0,90deg);
+
+    }
+	   @keyframes intop{
+	   	0%{transform:rotate3d(0,0,0,0deg);}
+	    100%{transform:rotate3d(-1,0,0,90deg);}
+	   }
+
+    .content .in-right{
+    	
+    	animation-name:inright;
+    }
+      @keyframes inright{
+      	0%{transform:rotate3d(0,0,0,0deg);}
+	    100%{transform:rotate3d(0,-1,0,90deg);}
+      }
+     .content .in-right .hide,.content .out-left .show{
+     transform-origin:0px 0px;	
+     transform:translate3d(300px,0px,0px) rotate3d(0,1,0,90deg);
+
+    }
+    .content .in-bottom{
+    	animation-name:inbottom;
+    }
+
+    @keyframes inbottom{
+    	0%{transform:rotate3d(0,0,0,0deg);}
+    	100%{transform:rotate3d(1,0,0,90deg);}
+    }
+
+     .content .in-bottom .hide,.content .out-top .show{
+     transform-origin:0px 0px;	
+     transform:translate3d(0px,200px,0px) rotate3d(1,0,0,-90deg);
+    }
+   .content .out-left{
+   	animation-name:outleft;   	
+   }
+   @keyframes outleft{
+    0%{transform:rotate3d(0,0,0,0deg);}
+    100%{transform:rotate3d(0,-1,0,90deg);}
+   }
+   .content .out-top{
+   	animation-name:outtop;
+   }
+   @keyframes outtop{
+   	0%{transform:rotate3d(0,0,0,0deg);}
+   	100%{transform:rotate3d(1,0,0,90deg);}
+   }
+   .content  .out-right{
+
+   	animation-name:outright;
+   }
+   @keyframes outright{
+   	0%{transform:rotate3d(0,0,0,0deg);}
+   	100%{transform:rotate3d(0,1,0,90deg);}   	
+   }
+   .content .out-bottom{
+   	animation-name:outbottom;
+   }
+   @keyframes outbottom{
+   	0%{transform:rotate3d(0,0,0,0deg);}
+   	100%{transform:rotate3d(-1,0,0,90deg);}
+   }
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="content">
+			<div class="picbox">
+				<div class="show">你是谁？</div>
+				<div class="hide">我是你哥</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="picbox">
+				<div class="show">你是谁？</div>
+				<div class="hide">我是你哥</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="picbox">
+				<div class="show">你是谁？</div>
+				<div class="hide">我是你哥</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="picbox">
+				<div class="show">你是谁？</div>
+				<div class="hide">我是你哥</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="picbox">
+				<div class="show">你是谁？</div>
+				<div class="hide">我是你哥</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="picbox">
+				<div class="show">你是谁？</div>
+				<div class="hide">我是你哥</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+ var oW = Array.prototype.slice.call(document.getElementsByClassName("content"));
+  oW.forEach(function(elem,index){
+      elem.addEventListener("mouseenter",function(e){addClass(this,e,"in");},false);
+     elem.addEventListener("mouseleave",function(e){addClass(this,e,"out");},false);
+  });
+
+ function addClass(elem, e, direction){                                
+ 	 var angle = getAngle(elem, e); 
+ 	 var oDiv = elem.getElementsByTagName("div")[0];
+ 	 oDiv.className = direction + "-" + angle;
+
+ }
+function getAngle(elem,e){
+	var tempW = elem.offsetWidth / 2,
+	    tempH = elem.offsetHeight / 2,
+	    tempx = e.offsetX - tempW,
+	    tempy = e.offsetY - tempH,
+	    angle = Math.atan2(tempy,tempx) * (180 / Math.PI) + 180,
+	    bench = Math.atan2(-tempH,-tempW) * (180 / Math.PI) + 180,
+	    temp = null;
+	    if(angle < bench){
+	    	temp = "left";
+	    }else if(angle >= bench && angle < (180 - bench)){
+	    	temp = "top";
+	    }else if(angle >= (180 - bench) && angle < (180 + bench)){
+	    	temp = "right";
+	    } else if(angle >= (180 + bench) && angle < (360 - bench)){
+	    	temp ="bottom";
+	    }else if(angle >= (360 -bench) && angle <= 360){
+	    	temp = "left";
+	    }
+		
+	return temp;
+}
+</script>
+</body>
+</html>

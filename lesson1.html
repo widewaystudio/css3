@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3 样式</title>
+	<style type="text/css">
+	@font-face{
+		font-family:"myFont";
+		src:url(font/CrimsonVermillion.ttf);
+
+	}
+	*{
+		padding:0px;
+		margin:0px;
+		list-style:none;
+
+	}
+	ul{
+		display:inline-block;
+		padding:10px 10px 10px 10px;
+		margin:10px 50px;
+		background:rgb(230,150,0);
+		border-radius:5px;
+		box-shadow:1px 2px 6px 0px rgba(0,0,0,0.4);
+	}
+     li{
+     	display:inline-block;
+     	padding:0px 10px;
+     	border-right:2px dotted #fff;
+     	text-shadow:1px 1px 2px rgba(0,0,0,0.4);
+     	color:#fff;
+     	font-family:"myFont";
+     	font-weight:bold;
+
+     }
+    li:nth-last-child(1){
+    	border:0px;
+    }
+
+
+		
+	</style>
+</head>
+<body>
+	<ul>
+		<li>Home</li>
+		<li>About me</li>
+		<li>Portfolio</li>
+		<li>Blog</li>
+		<li>Resources</li>
+		<li>Contant me</li>
+	</ul>
+</body>
+</html>
